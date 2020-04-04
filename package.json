@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ValueBytes/Reflect/issues"
   },
-  "homepage": "https://github.com/ValueBytes/Reflect#readme"
+  "homepage": "https://github.com/ValueBytes/Reflect#readme",
+  "devDependencies": {
+    "jest": "^25.2.7"
+  }
 }
