@@ -1,0 +1,26 @@
+.navbar {
+  font-family: $normal-stack;
+  font-size: 1rem;
+  background: white;
+  box-shadow: $shadowDepth1;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-weight: normal;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__profile-image {
+    margin-right: 20px;
+    width: 32px;
+    border-radius: 100%;
+  }
+}
