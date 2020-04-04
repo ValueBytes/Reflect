@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config=webpack.config.js",
+    "dev": "webpack-dev-server --config=webpack.config.js --open",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/ValueBytes/Reflect#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.0.4",
     "jest": "^25.2.7",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
