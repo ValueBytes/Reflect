@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 // https://stackoverflow.com/a/54490329
 import "core-js/stable";
@@ -12,8 +17,16 @@ import Navbar from './components/Navbar.jsx';
 
 import './observers';
 
+import dashboard from './pages/Dashboard.jsx';
+
 const App = () => (
-  <Navbar />
+  <Router>
+    <Navbar />
+
+    <Switch>
+      <Route exact path='/' component={dashboard} />
+    </Switch>
+  </Router>
 );
 
 ReactDOM.render(
