@@ -18,6 +18,14 @@ class Auth extends Component {
     }
   }
 
+  async anonLogin() {
+    try {
+      await firebase.auth().signInAnonymously();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   render() {
     const { show } = this.props;
 
@@ -29,7 +37,7 @@ class Auth extends Component {
           <button className="button button--primary" onClick={this.ghLogin}>
             Log in with GitHub
           </button>
-          <button className="button button--primary">
+          <button className="button button--primary" onClick={this.anonLogin}>
             Log in Anonymously
           </button>
         </div>
