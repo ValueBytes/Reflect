@@ -10,6 +10,8 @@ import './styles/app.scss';
 import store from './store';
 import Navbar from './components/Navbar.jsx';
 
+import './observers';
+
 const App = () => (
   <Navbar />
 );
