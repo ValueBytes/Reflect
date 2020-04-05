@@ -4,6 +4,12 @@
 // Settings
 @import 'settings/fonts';
 @import 'settings/shadows';
+@import 'settings/breakpoints';
+@import 'settings/colors';
+
+// Elements
+@import 'elements/button';
 
 // Components
 @import 'components/navbar';
+@import 'components/auth';
