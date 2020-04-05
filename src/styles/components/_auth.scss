@@ -1,0 +1,38 @@
+.auth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-around;
+
+  font-family: $normal-stack;
+
+  &--hide {
+    display: none;
+  }
+
+  &__title {
+    font-weight: normal;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50%;
+    padding: 0 46px;
+    background-color: white;
+    min-width: 327px;
+    max-height: 300px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: $screen-x-sm) {
+    .auth__container {
+      margin-top: 10%;
+    }
+  }
+}
