@@ -34,7 +34,9 @@ class Navbar extends Component {
             className="navbar__profile-image" 
             src="https://via.placeholder.com/50"
           />
-          <p onClick={this.signOut}>{user.displayName}</p>
+          <p onClick={this.signOut}>
+            {user.isAnonymous ? "Anonymous" : user.displayName}
+          </p>
         </div>
       </div>
     );
