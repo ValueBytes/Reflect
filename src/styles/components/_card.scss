@@ -1,0 +1,41 @@
+.card {
+  margin-bottom: 32px;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in-out;
+  border-top: 5px solid $purple;
+  background-color: white;
+  box-shadow: $shadowDepth2;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-family: $normal-stack;
+  font-size: 1rem;
+  padding: 35px;
+  min-width: 200px;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: white;
+
+    background-color: $purple;
+    border-radius: 100%;
+    padding: 15px 24px;
+    width: 65px;
+    height: 65px;
+  }
+
+  &__title {
+    margin-top: 41px;
+  }
+
+  &:hover {
+    box-shadow: $shadowDepth3;
+  }
+}
