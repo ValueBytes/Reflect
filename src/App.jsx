@@ -18,6 +18,7 @@ import Navbar from './components/Navbar.jsx';
 import './observers';
 
 import dashboard from './pages/Dashboard.jsx';
+import board from './pages/Board.jsx';
 
 const App = () => (
   <Router>
@@ -25,6 +26,7 @@ const App = () => (
 
     <Switch>
       <Route exact path='/' component={dashboard} />
+      <Route exact path='/:id' component={board} />
     </Switch>
   </Router>
 );
