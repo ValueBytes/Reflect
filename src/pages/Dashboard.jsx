@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getBoards } from '../store/actions/dashboard';
 
 import Card from '../components/Card.jsx';
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.props.getBoards();
   }
 
   render() {
@@ -37,4 +42,12 @@ const mapStateToProps = (state) => {
   };
 }
 
-export default connect(mapStateToProps)(Dashboard);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBoards: () => {
+      dispatch(getBoards());
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
