@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Card extends Component {
   constructor(props) {
     super(props);
+
+    this.gotoBoard = this.gotoBoard.bind(this);
+  }
+
+  gotoBoard() {
+    const id = this.props.board.id;
+
+    this.props.history.push(`/${id}`);
   }
 
   render() {
@@ -11,7 +20,7 @@ class Card extends Component {
     const letter = board.title.substr(0, 1);
 
     return (
-      <div className="card">
+      <div className="card" onClick={this.gotoBoard}>
         <div className="card__icon">
           {letter}
         </div>
@@ -22,4 +31,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default withRouter(Card);
