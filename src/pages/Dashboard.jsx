@@ -9,6 +9,14 @@ class Dashboard extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    const { signedIn, getBoards } = this.props;
+
+    if (signedIn) {
+      getBoards();
+    }
+  }
+  
   componentDidUpdate() {
     const { signedIn, getBoards } = this.props;
 
