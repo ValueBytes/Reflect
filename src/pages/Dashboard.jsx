@@ -26,7 +26,7 @@ class Dashboard extends Component {
             {
               boards.length > 0 &&
               boards.map(b => (
-                <Card board={b} />
+                <Card board={b} key={b.id} />
               ))
             }
           </div>
