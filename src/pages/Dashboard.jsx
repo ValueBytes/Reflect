@@ -9,10 +9,14 @@ class Dashboard extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.getBoards();
-  }
+  componentDidUpdate() {
+    const { signedIn, getBoards } = this.props;
 
+    if (signedIn) {
+      getBoards();
+    }
+  }
+  
   render() {
     const { boards } = this.props;
 
@@ -38,7 +42,8 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    boards: state.dashboard.boards
+    boards: state.dashboard.boards,
+    signedIn: state.auth.signedIn
   };
 }
 
