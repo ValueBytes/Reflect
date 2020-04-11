@@ -25,8 +25,8 @@ class Navbar extends Component {
     
     return (
       <div className="navbar">
-        <Link to="/">
-          <h3 className="navbar__title">
+        <Link to="/" className="navbar__title">
+          <h3>
             reflect
           </h3>
         </Link>
