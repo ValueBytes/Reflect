@@ -1,0 +1,34 @@
+.column {
+  font-family: $normal-stack;
+  padding: 0 46px;
+  height: 40vh;
+  
+  &:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    opacity: 0.7;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__cards {
+    list-style: none;
+  }
+
+  &__accent {
+    width: 6px;
+    height: 22px;
+    background-color: red;
+    border-radius: 2px;
+    margin-right: 13px;
+  }
+}

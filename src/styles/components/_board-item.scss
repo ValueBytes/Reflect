@@ -1,0 +1,13 @@
+.board-item {
+  font-family: $normal-stack;
+  font-weight: normal;
+  font-size: 1rem;
+  
+  padding: 20px;
+  width: 100%;
+  min-width: 200px;
+  background-color: rgba(244, 50, 50, 0.58);
+  border-radius: 8px;
+  margin: 20px 0;
+  color: white;
+}
