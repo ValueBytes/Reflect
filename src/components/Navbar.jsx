@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Auth from './Auth.jsx';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import firebase from '../config/firebase';
 
@@ -24,9 +25,11 @@ class Navbar extends Component {
     
     return (
       <div className="navbar">
-        <h3 className="navbar__title">
-          reflect
-        </h3>
+        <Link to="/">
+          <h3 className="navbar__title">
+            reflect
+          </h3>
+        </Link>
 
         <div className="navbar__profile">
           <Auth show={signedIn} />
