@@ -24,18 +24,14 @@ class Board extends Component {
   }
 
   render() {
-    const { board } = this.props;
+    const { columns } = this.props;
 
-    return board ? (
+    return columns ? (
       <section className="board">
-        <header>
-          {board.title}
-        </header>
-
         <div className="board__columns">
           {
-            board.columns &&
-            this.getColumns(board.columns)
+            columns &&
+            this.getColumns(columns)
           }
         </div>
       </section>
