@@ -2,10 +2,6 @@
   font-family: $normal-stack;
   padding: 0 46px;
   height: 40vh;
-  
-  &:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-  }
 
   &__title {
     text-transform: uppercase;
@@ -17,7 +13,7 @@
 
   &__header {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   }
 
   &__cards {

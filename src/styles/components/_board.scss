@@ -1,15 +1,15 @@
 .board {
-  padding: 50px 80px;
-
+  margin-top: 70px;
+  
   &__columns {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   @media (min-width: $screen-md) {
     .board__columns {
       flex-direction: row;
+      justify-content: space-evenly;
     }
   }
 }
