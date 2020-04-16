@@ -86,7 +86,6 @@ export function setBoard(board) {
 
 export function setBoardItems(items) {
   return dispatch => {
-    console.log(items);
     dispatch({type: 'SET_BOARD_CARDS', payload: items});
   }
 }
