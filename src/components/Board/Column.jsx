@@ -22,20 +22,12 @@ class Column extends Component {
     return card.order === details.order;
   }
 
-  getId(start) {
-    return Math.floor(
-      start + 
-      (Math.random() * 100) * 
-      (Math.random() * 100)
-    );
-  }
-
   getCards() {
     const { cards } = this.props;
 
     return cards
       .filter(this.filterCards)
-      .map(card => <BoardItem key={this.getId(card.order)} text={card.text} />);
+      .map(card => <BoardItem key={card.id} id={card.id} text={card.text} />);
   }
 
   render() {
