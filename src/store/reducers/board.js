@@ -8,14 +8,14 @@ const initState = {
 
 const boardReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'SET_META':
+    case 'SET_BOARD_META':
       state = {
         ...state,
         meta: action.payload
       };
       break;
     
-    case 'SET_COLUMNS':
+    case 'SET_BOARD_COLUMNS':
       state = {
         ...state,
         columns: action.payload
