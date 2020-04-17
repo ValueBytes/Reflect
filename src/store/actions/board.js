@@ -31,7 +31,10 @@ export function setBoardListener(id) {
       .onSnapshot(doc => {
         dispatch(
           setBoard(
-            doc.data()
+            {
+              id: doc.id,
+              ...doc.data()
+            }
           )
         );
       });
@@ -76,10 +79,11 @@ export function setItemListener(boardId) {
 
 export function setBoard(board) {
   return dispatch => {
-    dispatch({type: 'SET_COLUMNS', payload: board.columns});
+    dispatch({type: 'SET_BOARD_COLUMNS', payload: board.columns});
     dispatch({type: 'SET_BOARD_META', payload: {
       title: board.title,
       uid: board.uid,
+      id: board.id
     }});
   }
 }
@@ -108,4 +112,32 @@ function transformResponse(response) {
   });
 
   return cards;
+}
+
+/**
+ * Update board card
+ * 
+ * @param {string} id Id of card
+ * @param {string} text new text
+ */
+export function updateCard(id, text) {
+  return async (dispatch, getState) => {
+    let currentBoard = getState().board.meta.id;
+    
+    if (!currentBoard)
+      return;
+
+    try {
+      await db
+        .collection(ROOT_COLLECTION)
+        .doc(currentBoard)
+        .collection('items')
+        .doc(id)
+        .update({
+          text
+        });
+    } catch (err) {
+      console.error(err);
+    }
+  }
 }
