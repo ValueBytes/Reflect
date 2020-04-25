@@ -46,15 +46,25 @@ class Editable extends Component {
 
   getEditView() {
     const { text } = this.state;
+    const { className } = this.props;
 
     return (
-      <textarea
-        autoFocus
-        onBlur={this.submit}
-        value={text}
-        onChange={(e) => this.setState({text: e.target.value})}
-      >
-      </textarea>
+      <div>
+        <textarea
+          autoFocus
+          className={className}
+          onBlur={this.submit}
+          value={text}
+          onChange={(e) => this.setState({text: e.target.value})}
+        >
+        </textarea>
+       <button 
+         className="button button--action"
+         onClick={this.submit}
+       >
+         Done
+       </button>
+      </div>
     );
   }
 
