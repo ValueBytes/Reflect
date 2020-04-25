@@ -24,6 +24,7 @@ class BoardItem extends Component {
       <li className="board-item">
         <Editable
           defaultText={text}
+          className="board-item__textbox"
           update={this.update}
         />
       </li>
