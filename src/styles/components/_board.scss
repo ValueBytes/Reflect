@@ -9,7 +9,7 @@
   @media (min-width: $screen-md) {
     .board__columns {
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
   }
 }
